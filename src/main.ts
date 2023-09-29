@@ -12,10 +12,7 @@ async function bootstrap() {
     origin: 'https://noghteh-khat.ir',
     credentials: true,
   });
-  Sentry.init({
-    dsn: 'https://de3ceecd057d458db3fccc5e8361320b@o4504809613819904.ingest.sentry.io/4504809619324928',
-    tracesSampleRate: 1.0,
-  });
+
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

@@ -27,7 +27,6 @@ export class CommentController {
   @Roles(Role.Admin)
   @Get('unverifieds')
   async getUnverifieds() {
-    console.log('hi there');
     return await this.commentService.getUnverifieds();
   }
 
