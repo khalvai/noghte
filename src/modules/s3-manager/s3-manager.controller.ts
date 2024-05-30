@@ -13,13 +13,12 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { File } from '../../common/interfaces/file.interface';
 import { ApiTags } from '@nestjs/swagger';
 import { deleteObject } from './dto/deleteObject.dto';
-import { Professor } from '@prisma/client';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { Role } from '../auth/types/roles.enum';
 @ApiTags('aws-s3')
 @Controller('s3')
 export class S3ManagerController {
-  constructor(private readonly s3: S3ManagerService) {}
+  constructor(private readonly s3: S3ManagerService) { }
 
   @Roles(Role.Admin)
   @Get('buckets')
